@@ -1,0 +1,56 @@
+<div class="container" ng-controller="catalogController">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			RENTAL MANAGMENT SYSTEM
+			<div class="navbar-header">
+                <a class="navbar-brand" href="#">RENTAL MANAGMENT SYSTEM</a>
+            </div>
+            <div class="collapse navbar-collapse nav pull-right">
+
+            	<ul class="nav pull-right">
+
+			            <li class="dropdown">
+
+			                <a href="#" data-toggle="dropdown" class="dropdown-toggle">SELECT LOCATION <b class="caret"></b></a>
+
+			                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+
+			                    <li ng-repeat="location in locations" class="dropdown-submenu" ng-click="showCategories(location)">
+			                    	<a tabindex="-1" href="#">{{location.name}}</a>
+			                    	<ul class="dropdown-menu" role="menu">
+	          							<li ng-repeat="branch in location.branches" ng-click="showCategories(branch)">{{branch.name}}
+	          							</li>
+	          						</ul>
+			                    </li>
+			                </ul>
+
+			            </li>
+
+        			</ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="" ng-show="branchSelected">
+	<h3>Equipment Catalog</h3>
+	<div style="margin-top: 20px;border: 1px solid #ccc;float: left;width: 180px;" 
+        ng-repeat="category in selectedBranch.categories">
+            <img src="/category/{{category.image}}" width="300" height="300">
+            <div class="panel panel-primary" ng-click="displaySubCategory(category)" style="padding: 2px;text-align: center;margin-bottom: -20px">{{category.name}}</div>
+    </div>
+</div>
+
+<div class="" ng-show="subCategoryPage">
+	<h3>Equipment Catalog /{{selectedCategory.name}}</h3>
+	<div style="margin-top: : 20px;border: 1px solid #ccc;float: left;width: 180px;" 
+        ng-repeat="subcategory in selectedCategory.subcategories">
+            <img src="/category/subcategory/{{subcategory.image}}" width="200" height="200">
+            <div class="panel panel-primary" style="padding: 15px;text-align: center;margin-bottom: -10px">{{subcategory.name}}</div>
+    </div>
+</div>
+
+<footer class="footer" style="background: black;">
+	<div style="padding-right: 15px;padding-left: 15px;"></div>
+</footer>
+</div>
+

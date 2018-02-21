@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="RentalManagementApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Rental Management System</title>
+    <!--link rel="stylesheet" href="//https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css" />
+    <link href="app-content/app.css" rel="stylesheet" /-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.8.0/loading-bar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.3/js/ajax-bootstrap-select.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="catalogController.js"></script>
+
+    <!--script type="text/javascript">
+        
+        var app = angular.module('RentalManagementApp', ['angular-loading-bar']);
+
+        app.config(['$locationProvider', function ($locationProvider) {
+            $locationProvider.html5Mode({
+                enabled: true, requireBase: false
+            });
+        }]);
+
+
+        app.controller('catalogController', ['$scope', '$location', '$http', '$q', '$window',
+        function ($scope, $location, $http, $q, $window) {
+            $scope.getData = function () {
+                        $http.get('catalog.json').then(function(response) {
+                            var res = response.data.data.locations;
+                        });
+
+                     }
+
+                  
+
+                $scope.getData();
+
+         }
+
+         ]);
+
+    </script-->
+</head>
+
+<body>
+    <div ng-app="RentalManagementApp">
+    <ng-view></ng-view>
+
+</div>
+</body>
+<!--body ng-controller="catalogController">
+<button ng-click="getData()">Click</button>
+<div>
+In inde.htm;l
+
+<button id="{{'btnClicked'+1}}" ng-click="getData(data.code,'btnClicked'+$index+1)">Copy to wishlist</button>
+</div>
+
+</body-->
+</html>
