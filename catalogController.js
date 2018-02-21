@@ -9,7 +9,7 @@ function catalogController($scope,$location, $http, $q, $window) {
 $scope.locationArray = [{name:'',branches:[]}];
 $scope.path = "/category";
 $scope.getData = function () {
-        $http.get('catalog.json').then(function(response) {
+        $http.get('catalogData.json').then(function(response) {
             $scope.locations = response.data.data.locations;
             for(var i = 0; i<$scope.locations.length; i++){
             	var branchNames = $scope.locations[i].branches.map(function(br)
